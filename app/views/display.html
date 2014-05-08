@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+<div ng-include src="'views/menu.html'"></div>
+
+<h1>display: block</h1>
+<p>
+	A declaração display: block faz com que o elemento HTML seja renderizado como bloco, tal como os parágrafos e os cabeçalhos o são. Um bloco contém um espaço em branco tanto em cima como embaixo e não permite outros elementos HTML ao lado, exceto quando tiver sido declarado ao contrário (por exemplo, declarar a propriedade float para o elemento próximo ao bloco).
+</p>
+
+<div class="display-container">
+	<div class="example">
+		Exemplo:
+		<div class="first">
+			Primeiro {display: block}
+
+			<div class="second">
+				Segundo {display: block}
+			</div>
+			<div class="third">
+				Terceiro {display: block}
+			</div>
+		</div>
+	</div>
+</div>
+
+<h1>display: inline</h1>
+<p>
+	A propriedade display: inline faz com que o elemento HTML seja renderizado inline, dentro do bloco na mesma linha. Quando o elemento encontra-se entre dois blocos ele forma o chamado 'bloco anônimo' e é renderizado com a menor largura possível.
+</p>
+
+<div class="display-container">
+	<div class="example">Exemplo:
+		<div class="first">
+			display: block
+			<div class="second" style="display: inline">display: inline</div>
+			<div class="third">display: block</div>
+		</div>
+
+		<div class="first">
+			display: block
+			<div class="second">display: block</div>
+			<div class="third" style="display: inline">display: inline</div>
+		</div>
+	</div>
+</div>
+
+<h1>display: none</h1>
+<p>
+	A declaração display: none faz com que o elemento HTML não seja renderizado (assim sendo você não o verá no exemplo a seguir, é o segundo bloco. Ver código fonte).
+</p>
+
+<div class="display-container">
+	<div class="example">Exemplo:
+		<div class="first">
+			primeiro bloco - display: block
+			<div class="second" style="display: none">display: none (este você não verá)</div>
+			<div class="third">terceiro bloco - display: block</div>
+		</div>
+	</div>
+</div>
+
+
+<h1>display: table</h1>
+<p>
+	A declaração display: table faz com que o elemento HTML seja renderizado como tabela. Elementos aninhados devem ser renderizados como table-row e table-cell, tal como nossas velhas conhecidas TR's e TD's. Existe também a declaração display: table-column que não tem qualquer influência na renderização servindo apenas como uma informação tal como o elemento COL. Eu não tenho certeza de como exatamente esta declaração funciona.
+</p>
+
+<div class="display-container">
+	<div class="example">Exemplo:<br>
+
+		Neste exemplo as DIV's foram convenientemente aninhadas e declaradas com display: table,
+		display: table-row e display: table-cell.
+
+		<div class="first" style="display: table">
+			display: table
+			<div class="second" style="display: table-row">display: table-row
+				<div class="third" style="display: table-cell">display: table-cell e mais conteúdo </div>
+				<div class="third" style="display: table-cell">display: table-cell</div>
+			</div>
+			<div class="second" style="display: table-row">display: table-row
+				<div class="third" style="display: table-cell">display: table-cell</div>
+
+				<div class="third" style="display: table-cell">display: table-cell</div>
+			</div>
+		</div>
+		<br>
+
+		Para a  DIV mais externa deste exemplo foi declarado   display: block e não table.
+
+		<div class="first">
+			display: block
+			<div class="second" style="display: table-row">display: table-row
+				<div class="third" style="display: table-cell">display: table-cell e mais conteúdo </div>
+				<div class="third" style="display: table-cell">display: table-cell</div>
+
+				<span class="second" style="display: table-row"></span></div>
+			<div class="second" style="display: table-row">display: table-row
+				<div class="third" style="display: table-cell">display: table-cell</div>
+				<div class="third" style="display: table-cell">display: table-cell</div>
+			</div>
+		</div><br>
+
+		Neste exemplo não existe DIVs com  display: table-row
+
+		<div class="first" style="display:table">
+			display: table
+			<div class="third" style="display: table-cell">display: table-cell e mais conteúdo </div>
+
+			<div class="third" style="display: table-cell">display: table-cell</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
